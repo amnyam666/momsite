@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(145deg, #cfe9ff 0%, #b0d4ff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.cloud-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/clouds.png'),
+                radial-gradient(circle at 20% 40%, rgba(255,255,255,0.3) 0%, rgba(200,225,255,0.5) 100%);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(2px);
+    border-radius: 2rem;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+    border: 1px solid rgba(255,255,240,0.7);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.header-card {
+    text-align: center;
+    background: white;
+}
+
+.header-card h1 {
+    font-size: 1.9rem;
+    color: #2c6e9e;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+
+.header-card p {
+    color: #4b7b9e;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Статичная фотография мамы */
+.photo-preview-static {
+    text-align: center;
+    background: #f0f8ff;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.photo-preview-static img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.hint {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #6f97b5;
+    text-align: center;
+}
+
+/* Тест */
+.test-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.question {
+    margin-bottom: 1.5rem;
+    background: #f7fafd;
+    padding: 0.8rem 1.2rem;
+    border-radius: 1.5rem;
+}
+
+.question p {
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #1f5e8c;
+}
+
+.question label {
+    display: block;
+    margin: 0.4rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    padding-left: 0.3rem;
+}
+
+.primary-btn {
+    background: linear-gradient(95deg, #7fb4d4, #5f9bc2);
+    border: none;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+    width: 100%;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 0.5rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.primary-btn:hover {
+    background: linear-gradient(95deg, #5f9bc2, #4882a8);
+    transform: scale(0.98);
+}
+
+.message-area {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color: #df7e3c;
+}
+
+.angel-wrapper {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 3rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    animation: flyAngel 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    transform-origin: top center;
+}
+
+@keyframes flyAngel {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px) scale(0.5) rotate(-5deg);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(12px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.angel-figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.8rem;
+}
+
+.wings {
+    font-size: 2.5rem;
+    color: #cae3fc;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    display: flex;
+    gap: 5px;
+}
+
+.wings i {
+    margin: 0 2px;
+    text-shadow: 0 0 3px white;
+}
+
+.angel-photo-circle {
+    width: 140px;
+    height: 140px;
+    background: #fef9e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+    border: 4px solid white;
+    overflow: hidden;
+    background: #e1f0fa;
+}
+
+.angel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.congrats-message {
+    text-align: center;
+    background: #eef7ff;
+    padding: 1.4rem;
+    border-radius: 2rem;
+    margin-top: 0.9rem;
+}
+
+.congrats-message h2 {
+    color: #3375a3;
+    margin-bottom: 0.7rem;
+}
+
+.congrats-message p {
+    margin: 0.5rem 0;
+    color: #1f496b;
+    line-height: 1.4;
+}
+
+.birthday-hearts i {
+    color: #ff8cb0;
+    font-size: 1.6rem;
+    margin: 0.3rem;
+    animation: heartBeat 1.2s infinite;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); color: #ff6699; }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 1.2rem;
+    }
+    .header-card h1 {
+        font-size: 1.5rem;
+    }
+    .angel-photo-circle {
+        width: 110px;
+        height: 110px;
+    }
+    .wings {
+        font-size: 1.8rem;
+    }
+    .photo-preview-static img {
+        width: 110px;
+        height: 110px;
+    }
+}
